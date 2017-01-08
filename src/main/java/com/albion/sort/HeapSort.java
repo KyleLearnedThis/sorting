@@ -13,8 +13,7 @@ public class HeapSort extends BaseSort implements Sorter {
             heapify(input, n, i);
  
         // One by one extract an element from heap
-        for (int i=n-1; i>=0; i--)
-        {
+        for (int i=n-1; i>=0; i--) {
             // Move the 
         	swap(i, 0);
             heapify(input, i, 0);

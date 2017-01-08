@@ -34,12 +34,7 @@ public abstract class BaseSort implements Sorter {
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
-	
-	public void swapV2(int[] arr, int i, int j){
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-	}
+
 	public int findMax(){
 		int cur_max = Integer.MIN_VALUE;
 		for(int i = 0; i < input.length; i++){

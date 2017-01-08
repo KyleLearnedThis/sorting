@@ -7,14 +7,15 @@ public class BubbleSort extends BaseSort implements Sorter {
 	}
 
 	public void sort() {
-		int len = getInput().length;
-		int i, j,t=0;
+		int[] input = getInput();
+		int len = input.length;
+		int i, j,t;
 		for(i = 0; i < len; i++){
 			for(j = 1; j < (len-i); j++){
-				if(getInput()[j-1] > getInput()[j]){
-					t = getInput()[j-1];
-					getInput()[j-1]=getInput()[j];
-					getInput()[j]=t;
+				if(input[j-1] > input[j]){
+					t = input[j-1];
+					input[j-1] = input[j];
+					input[j] = t;
 				}
 			}
 		}

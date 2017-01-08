@@ -2,11 +2,11 @@ package com.albion.sort;
 
 import java.util.PriorityQueue;
 
-public class HeapSortTwo extends BaseSort implements Sorter {
+public class HeapSortV2 extends BaseSort implements Sorter {
 	PriorityQueue<Integer> queue = null;
-	public HeapSortTwo(int[] aInput) {
+	public HeapSortV2(int[] aInput) {
 		super(aInput);
-		queue = new PriorityQueue<Integer>();
+		queue = new PriorityQueue<>();
 		for(int i: aInput){
 			Integer x = new Integer(i);
 			queue.add(x);

@@ -11,9 +11,9 @@ public class InsertionSort extends BaseSort implements Sorter {
 	}
 
 	public void sort() {
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		int len = input.length;
-		//traverse each element in array
+		// traverse each element in array
 		for(int i = 0; i < len; i++){
 			for(int j = 0; j < list.size(); j++){
 				if(input[i] < list.get(j)){
@@ -25,8 +25,6 @@ public class InsertionSort extends BaseSort implements Sorter {
 		for(int r = 0; r < list.size(); r++){
 			input[r] = list.get(r).intValue();
 		}
-
-			
 	}
 
 }
