@@ -9,10 +9,10 @@ public class QuickSort extends BaseSort {
 	public void sort() {
 		if(input == null || input.length == 0)
 			return;
-		quicksort(0, input.length -1);
+		quickSort(0, input.length -1);
 	}
 
-	public void quicksort(int low, int high){
+	public void quickSort(int low, int high){
 		int i = low;
 		int j = high;
 		int pivot_index = low + (high - low)/2;
@@ -36,9 +36,9 @@ public class QuickSort extends BaseSort {
 			}
 		}
 		if (low < j)
-			quicksort(low, j);
+			quickSort(low, j);
 		if (i < high)
-			quicksort(i, high);
+			quickSort(i, high);
 	}
 
 }

@@ -10,8 +10,8 @@ public class SelectionSort extends BaseSort implements Sorter {
 	}
 
 	public void sort() {
-		List<Integer>  queue = new ArrayList<Integer>();
-		List<Integer> result = new ArrayList<Integer>();
+		List<Integer>  queue = new ArrayList<>();
+		List<Integer> result = new ArrayList<>();
 		for(int i = 0; i < input.length; i++){
 			queue.add(input[i]);
 		}
