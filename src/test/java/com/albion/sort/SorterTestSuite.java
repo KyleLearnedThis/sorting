@@ -49,14 +49,6 @@ public class SorterTestSuite {
   }
   
   @Test
-  public void testRadixSort(){
-	  int[] data = {1000,208,37,6,5,4};
-	  RadixSort rd1 = new RadixSort(data);
-	  rd1.sort();
-	  rd1.print();
-  }
-  
-  @Test
   public void testHeapSort01(){
 	  int[] data =  {9,8,7,6,5,4};
 	  HeapSort hs = new HeapSort(data);

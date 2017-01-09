@@ -6,7 +6,7 @@ public class BubbleSort extends BaseSort implements Sorter {
 		super(aInput);
 	}
 
-	public void sort() {
+	public int[] sort() {
 		int[] input = getInput();
 		int len = input.length;
 		int i, j,t;
@@ -19,5 +19,6 @@ public class BubbleSort extends BaseSort implements Sorter {
 				}
 			}
 		}
+		return input;
 	}
 }

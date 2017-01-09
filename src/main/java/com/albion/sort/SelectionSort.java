@@ -9,7 +9,7 @@ public class SelectionSort extends BaseSort implements Sorter {
 		super(aInput);
 	}
 
-	public void sort() {
+	public int[] sort() {
 		List<Integer>  queue = new ArrayList<>();
 		List<Integer> result = new ArrayList<>();
 		for(int i = 0; i < input.length; i++){
@@ -25,6 +25,8 @@ public class SelectionSort extends BaseSort implements Sorter {
 		for(int i = 0; i < input.length; i++){
 			input[i] = result.get(i).intValue();
 		}
+
+		return input;
 	}
 	
 	public int minIndex(List<Integer> list){

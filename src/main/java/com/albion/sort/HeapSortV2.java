@@ -13,10 +13,11 @@ public class HeapSortV2 extends BaseSort implements Sorter {
 		}
 	}
 
-	public void sort() {
+	public int[] sort() {
 		int len = queue.size();
 		for(int i = 0; i < len; i++){
 			this.input[i] = queue.remove().intValue();
 		}
+		return input;
 	}
 }

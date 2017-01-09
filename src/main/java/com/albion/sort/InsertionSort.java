@@ -10,7 +10,7 @@ public class InsertionSort extends BaseSort implements Sorter {
 		super(aInput);
 	}
 
-	public void sort() {
+	public int[] sort() {
 		List<Integer> list = new ArrayList<>();
 		int len = input.length;
 		// traverse each element in array
@@ -25,6 +25,7 @@ public class InsertionSort extends BaseSort implements Sorter {
 		for(int r = 0; r < list.size(); r++){
 			input[r] = list.get(r).intValue();
 		}
+		return input;
 	}
 
 }
