@@ -36,14 +36,16 @@ public class RadixSort extends BaseSort {
 	public int extractDigits(int input , int offset){
 
 		int digits = countDigits(input);
+		int val;
 		if(digits < offset) {
-			int base = (int) Math.pow(10, offset - digits);
-			input = input * base;
-			offset--;
+			return 0;
+//			String x = String.valueOf(input);
+//			val = Integer.valueOf(x.charAt(x.length() - 1) + "");
+		} else {
+			char c = String.valueOf(input).charAt(digits - offset);
+			val = Integer.valueOf(String.valueOf(c)).intValue();
 		}
- 		//TODO: offset should not bigger than max digit count
-		char c = String.valueOf(input).charAt(offset - 1);
-		int val = Integer.valueOf(String.valueOf(c)).intValue();
+
 		return val;
 	}
 
@@ -57,7 +59,7 @@ public class RadixSort extends BaseSort {
 		for (int i = 0; i < maxDigits; i++) {
 			ArrayList<Integer> resultList = new ArrayList<>();
 			for(int j = 0; j < result.length; j++) {
-				int index = extractDigits(result[j], i + 1);
+				int index = extractDigits(result[j], i+1);
 				ArrayList<Integer> list = bucket.get(index);
 				list.add(result[j]);
 			}
