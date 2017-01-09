@@ -6,7 +6,7 @@ public class HeapSort extends BaseSort implements Sorter {
 		super(x);
 	}
 
-    public void sort() {
+    public int[] sort() {
         int n = input.length;
         // Build heap (rearrange array)
         for (int i = n / 2 - 1; i >= 0; i--)
@@ -18,6 +18,8 @@ public class HeapSort extends BaseSort implements Sorter {
         	swap(i, 0);
             heapify(input, i, 0);
         }
+
+        return input;
     }
  
     // To heapify a subtree rooted with node i which is

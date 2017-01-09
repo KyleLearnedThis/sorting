@@ -6,10 +6,12 @@ public class QuickSort extends BaseSort {
 		super(aInput);
 	}
 
-	public void sort() {
-		if(input == null || input.length == 0)
-			return;
+	public int[] sort() {
+		if(input == null || input.length == 0) {
+			return input;
+		}
 		quickSort(0, input.length -1);
+		return input;
 	}
 
 	public void quickSort(int low, int high){
@@ -35,10 +37,12 @@ public class QuickSort extends BaseSort {
 				j--;
 			}
 		}
-		if (low < j)
+		if (low < j){
 			quickSort(low, j);
-		if (i < high)
+		}
+		if (i < high) {
 			quickSort(i, high);
+		}
 	}
 
 }
