@@ -3,7 +3,6 @@ package com.albion.sort;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class InsertionSort extends BaseSort implements Sorter {
 
 	public InsertionSort(int[] aInput) {
@@ -11,6 +10,19 @@ public class InsertionSort extends BaseSort implements Sorter {
 	}
 
 	public int[] sort() {
+		for (int i = 1; i < input.length; i++) {
+			int value = input[i];
+			int j = i;
+			while (j > 0 && input[j - 1] > value) {
+				input[j] = input[j - 1];
+				j--;
+			}
+			input[j] = value;
+		}
+		return input;
+	}
+
+	public int[] sortV2() {
 		List<Integer> list = new ArrayList<>();
 		int len = input.length;
 		// traverse each element in array
@@ -27,5 +39,4 @@ public class InsertionSort extends BaseSort implements Sorter {
 		}
 		return input;
 	}
-
 }
