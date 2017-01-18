@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-
-public class QuickSortTest {
+public class HeapSortTest {
     @Test
     public void testSort() throws Exception {
         List<Integer> list = IntStream.range(1, 101).boxed().collect(Collectors.toList());
@@ -19,8 +18,8 @@ public class QuickSortTest {
         int[] input = list.stream().mapToInt(i->i).toArray();
         System.out.println("Input:");
         Arrays.stream(input).forEach(val -> System.out.print(val + " "));
-        QuickSort q = new QuickSort(input);
-        int[] actual = q.sort();
+        HeapSort hs = new HeapSort(input);
+        int[] actual = hs.sort();
         boolean result = Arrays.equals(actual, expected);
         Assert.assertTrue(result);
         System.out.println("\nOutput:");
